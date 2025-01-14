@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  app:
+    platform: linux/amd64  # Указываем платформу для контейнера (для совместимости)
+    build:
+      context: .  # Контекст сборки - текущая директория
+      dockerfile: Dockerfile  # Указываем Dockerfile для сборки образа
+
+    container_name: transactions_app  # Название контейнера
+    ports:
+      - "8080:8080"  # Пробрасываем порт 8080 с контейнера на хост
+
+    volumes:
+      - ./migrations:/app/migrations  # Подключаем локальную директорию с миграциями в контейнер
+      - type: bind
+        source: ./database.db  # Подключаем локальный файл базы данных
+        target: /app/database.db  # Путь, по которому база данных будет доступна в контейнере
+
+    environment:
+      - APP_ENV=production  # Устанавливаем переменную окружения для режима работы приложения (production)
+      - DATABASE_PATH=/app/database.db  # Указываем путь к базе данных внутри контейнера
+
+    command: ["./main"]  # Команда для запуска приложения внутри контейнера
