@@ -40,7 +40,7 @@ coverage.out
 
 # OS specific files
 .DS_Store
-Thumbs.db
+Thumbs.dbpack
 
 # Temporary files
 *.tmp
@@ -49,3 +49,5 @@ Thumbs.db
 
 # Module cache (optional)
 go.mod.cache
+/dbpack.dbpack
+/database.db
