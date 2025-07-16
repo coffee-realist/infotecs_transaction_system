@@ -1,0 +1,1 @@
+SELECT from_address, to_address, amount, created_at FROM transactions ORDER BY created_at DESC LIMIT ?

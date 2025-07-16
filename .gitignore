@@ -50,4 +50,4 @@ Thumbs.dbpack
 # Module cache (optional)
 go.mod.cache
 /dbpack.dbpack
-/database.db
+/database.executor

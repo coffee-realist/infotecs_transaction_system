@@ -1,0 +1,1 @@
+INSERT INTO wallets (address, balance) VALUES (?, ?)
