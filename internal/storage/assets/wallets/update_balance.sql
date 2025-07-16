@@ -1,0 +1,1 @@
+UPDATE wallets SET balance = ? WHERE address = ?

@@ -1,0 +1,1 @@
+INSERT INTO transactions (from_address, to_address, amount) VALUES (?, ?, ?)
