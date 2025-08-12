@@ -1,0 +1,1 @@
+SELECT balance FROM wallets WHERE address = ?
