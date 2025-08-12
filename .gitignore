@@ -22,7 +22,6 @@ go.work.sum
 
 # Build output directories
 bin/
-build/
 
 # IDE specific files (adjust based on your environment)
 .idea/
